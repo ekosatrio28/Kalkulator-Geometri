@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perhitungan Bilangan Geometri</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <h2>Perhitungan Bilangan Geometri</h2>
+    <form id="calculationForm" onsubmit="calculate(event);">
+        <label for="choice">Pilih perhitungan:</label>
+        <select name="choice" id="choice" onchange="updateForm();">
+            <option value="r">Rasio (r)</option>
+            <option value="u">Suku ke-n (Un)</option>
+            <option value="sn">Jumlah n suku (Sn)</option>
+        </select>
+        <br>
+        <label for="n">Masukan nilai n:</label>
+        <input type="number" name="n" id="n" required>
+        <br>
+        <label for="a">Masukkan nilai a (suku pertama):</label>
+        <input type="number" name="a" id="a" required>
+        <br>
+        <label for="u" id="label_u" style="display: none;">Masukkan nilai Un (suku ke-n):</label>
+        <input type="number" name="u" id="u" style="display: none;">
+        <br>
+        <label for="r" id="label_r" style="display: none;">Masukkan nilai r (rasio):</label>
+        <input type="number" name="r" id="r" style="display: none;">
+        <br>
+        <input type="submit" value="Hitung">
+    </form>
+
+    <div id="result" class="result"></div>
+
+<footer class="copyright">
+    Copyright © 2025 Eko Satrio. All Rights Reserved.
+</footer>
+</body>
+</html>
